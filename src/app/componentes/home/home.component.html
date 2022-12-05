@@ -1,0 +1,17 @@
+<h1 style="text-align:center;">Bienvenido Practica Directiva NG</h1>
+
+<h2>Numero:</h2>
+<input [(ngModel)]="numero"/>
+<br />
+<p *ngIf="numero>3 ||numero !=''"> El numero {{numero}} es un numero mayor a 3</p>
+
+
+<h2>Sueldos:</h2>
+
+<ul *ngFor="let sueldos of sueldos">
+ <li>{{sueldos}}</li>
+</ul>
+
+<div *ngFor="let sueldo of sueldos">
+    <div>Sueldo: {{sueldo}}</div>
+</div>
