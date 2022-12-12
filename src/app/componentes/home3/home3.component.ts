@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class Home3Component implements OnInit {
 
   constructor() { }
-
+  nombre:any;
+  email:any
+  pass:any
+  conf:any
+  pho;any
   ngOnInit(): void {
+    this.datos()
+  }
+
+  datos()
+  {
+    this.nombre=localStorage.getItem('Nombre');
+    this.email=localStorage.getItem('Email');
+    this.pass=localStorage.getItem('password');
+    this.conf=localStorage.getItem('Confirm_Password');
+    this.pho=localStorage.getItem('Phone_number');
   }
 
 }
