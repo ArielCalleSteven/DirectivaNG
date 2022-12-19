@@ -1,5 +1,6 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home3',
@@ -7,17 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home3.component.css']
 })
 export class Home3Component implements OnInit {
-
+  constructor(private pra: Router) { }
   Name: Text
   Email: Text
-  contraseña: Text
+  contrasena: Text
   confirma: Text
   phone: Text
-
-  
-  
-  constructor() { }
-
   ngOnInit(): void {
     localStorage.clear();
   }
@@ -25,10 +21,15 @@ export class Home3Component implements OnInit {
   almacena(){
     localStorage.setItem('Nombre', this.Name.toString())
     localStorage.setItem('correo', this.Email.toString())
-    localStorage.setItem('contraseña', this.contraseña.toString())
+    localStorage.setItem('contrasena', this.contrasena.toString())
     localStorage.setItem('confir', this.confirma.toString())
     localStorage.setItem('telefono', this.phone.toString())
 
   }
+
+  navega()
+{
+  this.pra.navigate(["pagina4"])
+}
 
 }

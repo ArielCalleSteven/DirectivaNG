@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home4',
@@ -9,7 +10,7 @@ export class Home4Component {
   constructor() { }  
   Nombre:any
   Email:any
-  contraseña:any
+  contrase:any
   confirma:any
   phone:any
   ngOnInit() {
@@ -19,7 +20,7 @@ export class Home4Component {
   recupera(){
     this.Nombre= localStorage.getItem('Nombre')
     this.Email= localStorage.getItem('Email')
-    this.contraseña= localStorage.getItem('contraseña')
+    this.contrase= localStorage.getItem('contrasena')
     this.confirma= localStorage.getItem('confirma' )
     this.phone= localStorage.getItem('phone')
 }
