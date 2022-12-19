@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home2',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Home2Component implements OnInit {
 
-  constructor() { }
+  constructor(private pri: Router) { }
 
   resultado:any
   mensaje:any
@@ -19,5 +20,11 @@ export class Home2Component implements OnInit {
   {
     this.resultado=localStorage.getItem('valor_total');
     this.mensaje=localStorage.getItem('mensaje')
+  }
+
+
+  navega4()
+  {
+    this.pri.navigate(["pagina3"])
   }
 }

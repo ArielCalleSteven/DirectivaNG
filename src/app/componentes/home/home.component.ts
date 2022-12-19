@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pre: Router) { }
   numero:any;
   suma:any;
   sueldos=[1700,1600,1900,2000,2100];
@@ -23,5 +24,10 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('valor_total',this.numero)
     localStorage.setItem('mensaje','almacenado')
   }
+   
 
+  navega3()
+  {
+    this.pre.navigate(["pagina2"])
+  }
 }
